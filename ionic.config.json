@@ -1,0 +1,7 @@
+{
+  "name": "lenguas-indigenas-michoacan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
