@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PurepechaWords } from '../models/purepecha-words';
+import { PurepechaService } from '../services/purepecha.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  public purepechaw?: PurepechaWords[];
+
+  constructor(
+    public purepechaService: PurepechaService,
+  ) {}
+
+
+  ngOnInit(): void {
+
+    this.purepechaService.listPurepecha()
+    .subscribe(
+      list => {
+        console.log(list);
+        this.purepechaw = ( <PurepechaWords[]> list )
+      }
+    )
+
+  }
 
 }
