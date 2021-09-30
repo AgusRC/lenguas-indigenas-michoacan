@@ -13,16 +13,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
+  <div id="container" >
     <ion-card *ngFor="let wordP of purepechaw">
-      <ion-card-header>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-header *ngFor="let ref of wordP.reference">
+        <ion-card-subtitle>{{ref.espanolw.mainword}}</ion-card-subtitle>
         <ion-card-title>{{wordP.mainword}}</ion-card-title>
       </ion-card-header>
     
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <ion-card-content *ngFor="let ref of wordP.reference">
+        <p *ngIf="ref.espanolw">{{ref.reference}}</p>
       </ion-card-content>
     </ion-card>
     
