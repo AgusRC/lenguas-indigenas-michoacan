@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { PurepechaWords } from '../models/purepecha-words';
 import { PurepechaService } from '../services/purepecha.service';
+import { DictionaryService } from '../services/dictionary.service'
+import { ReferenceModel } from '../models/referenceModel';
 
 @Component({
   selector: 'app-home',
@@ -10,22 +12,18 @@ import { PurepechaService } from '../services/purepecha.service';
 export class HomePage {
 
   public purepechaw?: PurepechaWords[];
+  public references?: ReferenceModel[];
 
   constructor(
     public purepechaService: PurepechaService,
+    public dictionaryService: DictionaryService,
   ) {}
 
 
   ngOnInit(): void {
-
-    this.purepechaService.listPurepecha()
-    .subscribe(
-      list => {
-        console.log(list);
-        this.purepechaw = ( <PurepechaWords[]> list )
-      }
-    )
-
+   
   }
+
+  
 
 }

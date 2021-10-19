@@ -1,30 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="container" class="container">
+    <h1 class="title">El pueblo Purépecha</h1>
 
-  <div id="container" >
-    <ion-card *ngFor="let wordP of purepechaw">
-      <ion-card-header *ngFor="let ref of wordP.reference">
-        <ion-card-subtitle>{{ref.espanolw.mainword}}</ion-card-subtitle>
-        <ion-card-title>{{wordP.mainword}}</ion-card-title>
+    <ion-card>
+      <img src="../../assets/img/culturapurepecha.jpg" />
+      <ion-card-header>
+        <ion-card-title>México prehispánico y colonial</ion-card-title>
       </ion-card-header>
-    
-      <ion-card-content *ngFor="let ref of wordP.reference">
-        <p *ngIf="ref.espanolw">{{ref.reference}}</p>
-      </ion-card-content>
+      <ion-card-content>
+        Diego Rivera, Fresco, 1941-1952, Superficie total: 198.92 m2. Corredor del primer piso de Palacio Nacional, Plaza de la Constitución, Ciudad de México (fragmento). FOTO: OLIVER SANTANA / RAÍCES.</ion-card-content>
     </ion-card>
-    
-    
+
+    <p class="bodytext">El pueblo indígena de las regiones lacustre y montañosa, del centro de Michoacán, se llama así mismo P'urhépecha,
+      y cada uno de sus integrantes es un p'urhé o p'uré que significa gente o persona; 
+      esto implica una autoafirmación como seres humanos y pueblo en general.
+      <br><br>
+      Este pueblo era conocido como tarasco; sin embargo, esta denominación es externa.
+      La población p'urhépecha se concentra sobre todo en 22 municipios: 
+      Coeneo, Charapan, Cherán, Chilchota, Erongarícuaro, Los Reyes, Nahuatzen, Nuevo Parangaricutiro, Paracho, Pátzcuaro, Periban, Quiroga, Tancítaro, Tangamandapio, Tangancícuaro, Tingambato, Tinguindín, Tocumbo, Tzintzuntzan, Uruapan, Zacapu y Ziracuaretiro; 
+      sin embargo, los hablantes de la lengua p'urhé se distribuyen en 95 de los 113 municipios del estado.
+      <br><br>
+      El idioma p'urhé no tiene parentesco lingüístico cercano con ninguna de las lenguas originales que se hablan en México. 
+      Se reconocen tres variantes dialectales: 
+      la de la región lacustre, central y serrana.
+      <br><br>
+      En el registro de los censos se puede apreciar la sensible disminución de los hablantes de la lengua p'urhé a lo largo del tiempo; 
+      sin embargo, a partir de 1980 ha dado inicio un movimiento de apoyo a través de la Academia de la lengua purhé y el trabajo del Centro de Investigaciones de la Cultura p'urhépecha, 
+      para el fortalecimiento de esta lengua con el establecimiento de su abecedario.
+    </p>
+    <p class="text-muted">fuente: https://www.gob.mx/epn/es/articulos/conoce-mas-sobre-las-comunidades-purepechas</p>
   </div>
 </ion-content>

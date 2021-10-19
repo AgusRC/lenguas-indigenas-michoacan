@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'new-word',
+    loadChildren: () => import('./pages/new-word/new-word.module').then( m => m.NewWordPageModule)
+  },
+  {
+    path: 'dictionary',
+    loadChildren: () => import('./pages/dictionary/dictionary.module').then( m => m.DictionaryPageModule)
+  },
 ];
 
 @NgModule({
