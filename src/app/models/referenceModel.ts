@@ -1,4 +1,5 @@
 import { EspanolWords } from "./espanol-words";
+import { PurepechaWords } from "./purepecha-words";
 
 export interface ReferenceModel {
     id: number;
@@ -6,4 +7,5 @@ export interface ReferenceModel {
     registeredAt: string;
     updatedAt: string;
     espanolw: EspanolWords;
+    purepechaw: PurepechaWords;
 }

@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Diccionario
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" [routerLink]="['/new-word']">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <div id="container">
+    <ion-searchbar animated (ionInput)="search($event)"></ion-searchbar>
+    
+    <ion-card *ngFor="let ref of references">
+      <ion-card-header >
+        <ion-card-subtitle>{{ref.espanolw.mainword}}</ion-card-subtitle>
+        <ion-card-title>{{ref.purepechaw.mainword}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p>{{ref.reference}}</p>
+      </ion-card-content>
+    </ion-card>
+    
+    
+  </div>
+</ion-content>
