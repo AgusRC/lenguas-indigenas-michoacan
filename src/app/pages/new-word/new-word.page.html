@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>newWord</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Español:</ion-label>
+    <ion-input #espanolw></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Purepecha:</ion-label>
+    <ion-input #purepechaw></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Referencia:</ion-label>
+    <ion-input #reference></ion-input>
+  </ion-item>
+  <ion-button color="success" expand="block" (click)='registerNewWord(espanolw.value, purepechaw.value, reference.value)'>Guardar</ion-button>
+</ion-content>
