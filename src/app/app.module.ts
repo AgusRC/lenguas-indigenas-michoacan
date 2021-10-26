@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SidemenuComponent } from './shared/sidemenu/sidemenu.component';
+import { RefresherComponent } from './shared/refresher/refresher.component';
 
 @NgModule({
-  declarations: [AppComponent, SidemenuComponent],
+  declarations: [AppComponent, SidemenuComponent, RefresherComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
