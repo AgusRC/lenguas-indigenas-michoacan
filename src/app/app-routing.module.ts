@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'dictionary',
     loadChildren: () => import('./pages/dictionary/dictionary.module').then( m => m.DictionaryPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },
 ];
 
 @NgModule({

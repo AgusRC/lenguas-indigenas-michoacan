@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formRegister">
+  <!------------->
+  <ion-item>
+    <ion-label position="floating">Nombre:</ion-label>
+    <ion-input formControlName="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Primer Apellido:</ion-label>
+    <ion-input formControlName="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Segundo Apellido:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Correo Electronico:</ion-label>
+    <ion-input type="email" formControlName="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Contraseña:</ion-label>
+    <ion-input type="password" formControlName="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Repita la Contraseña:</ion-label>
+    <ion-input type="password" formControlName="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Fecha de Nacimiento</ion-label>
+    <ion-datetime displayFormat="YYYY/MM/DD" min="1900-01-01" max="2021-12-31" value="2020-03-20"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nacionalidad:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Estado:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Genero:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Telefono:</ion-label>
+    <ion-input type="tel"></ion-input>
+  </ion-item>
+  <!-------------->
+</form>
+<ion-button expand="block" (click)="registerUser()">Registrarse</ion-button>
+</ion-content>
