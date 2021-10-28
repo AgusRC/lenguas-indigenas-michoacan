@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DictionaryService } from 'src/app/services/dictionary.service';
 
 @Component({
@@ -10,18 +12,18 @@ export class NewWordPage implements OnInit {
 
   constructor(
     public dictionaryService: DictionaryService,
+    public router: Router,
+    public location: Location,
   ) { }
 
   ngOnInit() {
   }
 
-  registerNewWord(espanolw: string, purepechaw: string, reference: string) {
+  async registerNewWord(espanolw: string, purepechaw: string, reference: string) {
     console.log(espanolw, purepechaw, reference);
-    this.dictionaryService.registerWords({espanolw, purepechaw, reference}).subscribe(
-      resp => {
-        console.log(resp);
-      }
-    );
+    await this.dictionaryService.registerWords({espanolw, purepechaw, reference}).toPromise();
+    // espera a el registro y regresa a listado
+    this.router.navigate(['/dictionary']).then(() => window.location.reload());
   }
 
 }
