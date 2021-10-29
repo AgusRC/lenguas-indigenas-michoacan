@@ -10,9 +10,11 @@
 <ion-content>
 
   <ion-card *ngFor="let myth of myths">
+    <a [routerLink]="['/thatmyth', myth.id]">
     <ion-card-header>
       <ion-card-title>{{myth.title}}</ion-card-title>
+      <ion-card-subtitle>Autor fecha: AAAA-MM-DD</ion-card-subtitle>
     </ion-card-header>
+    </a>
   </ion-card>
-
 </ion-content>

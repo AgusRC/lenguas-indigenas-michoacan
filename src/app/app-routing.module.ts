@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'myths',
     loadChildren: () => import('./pages/myths/myths.module').then( m => m.MythsPageModule)
   },
+  {
+    path: 'thatmyth/:mythId',
+    loadChildren: () => import('./pages/thatmyth/thatmyth.module').then( m => m.ThatmythPageModule)
+  },
 ];
 
 @NgModule({

@@ -19,4 +19,11 @@ export class MythsService {
       { responseType: 'json' }
     );
   }
+
+  public getMyth(mythId: number): Observable<Object> {
+    return this.http.get<any>(
+      this.MyBaseUrl + 'myths/mythId/' + mythId,
+      { responseType: 'json' }
+    );
+  }
 }
