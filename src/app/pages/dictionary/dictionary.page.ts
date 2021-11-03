@@ -13,7 +13,7 @@ export class DictionaryPage implements OnInit {
 
   public purepechaw?: PurepechaWords[];
   public references?: ReferenceModel[];
-  
+
   constructor(
     public purepechaService: PurepechaService,
     public dictionaryService: DictionaryService,
@@ -24,22 +24,23 @@ export class DictionaryPage implements OnInit {
     this.dictionaryService.listDictionary()
     .subscribe(
       list => {
-        console.log(list);
-        this.references = ( <ReferenceModel[]> list )
+        this.references = ( <ReferenceModel[]> list );
       }
-    )
+    );
   }
 
   search( evt ): void {
-    const key = evt.srcElement.value
-    if (!key) return;
-    
+    const key = evt.srcElement.value;
+    if (!key) {
+      this.ngOnInit();
+    }
+
     this.dictionaryService.searchWord( key )
     .subscribe(
       list => {
-        this.references = ( <ReferenceModel[]> list )
+        this.references = ( <ReferenceModel[]> list );
       }
-    )
+    );
   }
 
 }
